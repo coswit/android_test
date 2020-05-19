@@ -1,0 +1,2 @@
+include ':app', ':jnitest'
+rootProject.name='androidTest'
