@@ -25,15 +25,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tv.setText(stringFromJNI("java传递数据"));
-                AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
-                        .setIcon(R.mipmap.ic_launcher_round)
-                        .setCancelable(true)
-                        .setTitle("dialog")
-                        .show();
-
             }
         });
 
+    }
+
+    private void showDialog() {
+        AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
+                .setIcon(R.mipmap.ic_launcher_round)
+                .setCancelable(true)
+                .setTitle("dialog")
+                .show();
     }
 
     public native String stringFromJNI(String to);
